@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #202b3c;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header, main, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfe5ee;
+}
+
+.logo {
+  color: #285cc4;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header span, .intro, footer {
+  color: #687487;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: 32px;
+}
+
+.intro {
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #e0e6ef;
+  border-radius: 14px;
+  background: white;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px #202b3c15;
+}
+
+a:focus-visible {
+  outline: 3px solid #285cc4;
+  outline-offset: 4px;
+}
+
+.card img, .product img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.price {
+  margin: 0;
+  color: #285cc4;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 8px 0 24px;
+  color: #285cc4;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid #e0e6ef;
+  border-radius: 14px;
+  background: white;
+}
+
+.product-content {
+  padding: 32px;
+}
+
+.product h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+
+.product h2 {
+  margin-top: 28px;
+  font-size: 20px;
+}
+
+.description {
+  color: #4c596c;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .header span {
+    display: none;
+  }
+
+  .product-content {
+    padding: 24px;
+  }
+}
