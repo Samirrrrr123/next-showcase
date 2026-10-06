@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Витрина товаров',
-  description: 'Учебный проект витрины на Next.js',
+  description: 'Каталог товаров на каждый день',
 }
 
 export default function RootLayout({ children }) {
@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
           <span>Товары на каждый день</span>
         </header>
         <main>{children}</main>
-        <footer>Учебный проект на Next.js</footer>
       </body>
     </html>
   )
